@@ -1,6 +1,7 @@
 
 # app.py — Global GDP Insights Dashboard
 from pathlib import Path
+import pandas as pd
 import textwrap
 import plotly.express as px
 import streamlit as st

@@ -5,10 +5,10 @@ import pandas as pd
 import plotly.express as px
 from dash import Dash, html, dcc, dash_table, Input, Output, State
 
-# ---- Config ----
+# Config
 DATA_PATH = Path(os.getenv("DATA_PATH", "data/tidy/Merged_tidy.csv"))
 
-# ---- Load data once ----
+# Load data once
 if not DATA_PATH.exists():
     raise FileNotFoundError(
         f"CSV not found at {DATA_PATH}. "
@@ -33,7 +33,7 @@ countries = sorted(df["country"].dropna().unique())
 has_growth = "gdp_growth(%)" in df.columns
 metrics = ["gdp_usd"] + (["gdp_growth(%)"] if has_growth else [])
 
-# ---- App ----
+# App
 app = Dash(__name__, title="Global GDP Insights")
 server = app.server  # for gunicorn
 
@@ -116,7 +116,7 @@ app.layout = html.Div(
     ]
 )
 
-# ---- Callbacks ----
+# Callbacks
 
 @app.callback(
     Output("kpi-row", "children"),

@@ -31,7 +31,3 @@ Steps included:
 4. Exporting a final tidy dataset (`Merged_tidy.csv`) for visualization
 
 ---
-
-## Preview
-![Dashboard Screenshot](<img width="1508" height="970" alt="image" src="https://github.com/user-attachments/assets/e859853a-66ef-4543-a649-9eaf1cff93c6" />
-)

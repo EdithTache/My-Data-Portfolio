@@ -1,0 +1,10 @@
+streamlit
+pypdf
+sentence-transformers
+faiss-cpu
+yfinance
+scikit-learn
+joblib
+transformers
+accelerate
+sentencepiece

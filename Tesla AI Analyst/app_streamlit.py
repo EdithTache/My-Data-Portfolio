@@ -11,8 +11,11 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import streamlit as st
 
-PDF_PATH = "Tesla_Annual_Report.pdf"
-MODEL_PATH = "tsla_revenue_model.pkl"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+PDF_PATH = BASE_DIR / "Tesla_Annual_Report.pdf"
+MODEL_PATH = BASE_DIR / "tsla_revenue_model.pkl"
 
 # RAG: load & chunk PDF
 
